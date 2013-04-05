@@ -129,9 +129,6 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
-			</xsl:element>
-			</xsl:copy>
-		</xsl:for-each>
 		<!-- Cosa fare -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GLuNXAwLEghDYXRlZ29yeRjBPgw']">
 			<xsl:copy>
@@ -182,9 +179,6 @@
 					<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 					</xsl:copy>
 				</xsl:for-each>		
-			</xsl:element>
-			</xsl:copy>
-		</xsl:for-each>
 		<!-- Come Muoversi -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GLuNXAwLEghDYXRlZ29yeRiiHww']">
 			<xsl:copy>
@@ -242,9 +236,6 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
-			</xsl:element>
-			</xsl:copy>
-		</xsl:for-each>
 		<!-- Dove Mangiare -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GLuNXAwLEghDYXRlZ29yeRipRgw']">
 			<xsl:copy>

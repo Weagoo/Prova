@@ -121,6 +121,7 @@
 				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GLfNZgwLEghDYXRlZ29yeRj7VQw</xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
+			</xsl:for-each>
 			<!-- luoghi storici -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GLfNZgwLEghDYXRlZ29yeRj_VQw']">
 				<xsl:copy>
@@ -135,6 +136,9 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
+			</xsl:element>
+			</xsl:copy>
+		</xsl:for-each>
 		<!-- Itinerari -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GLfNZgwLEghDYXRlZ29yeRjdNgw']">
 				<xsl:copy>
@@ -192,6 +196,9 @@
 					<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 					</xsl:copy>
 				</xsl:for-each>
+				</xsl:element>
+				</xsl:copy>
+		</xsl:for-each>
 		<!-- Come Muoversi -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIQsSC1VzZXJBY2NvdW50GLfNZgwLEghDYXRlZ29yeRgKDA']">
 			<xsl:copy>
@@ -234,12 +241,14 @@
 				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GLfNZgwLEghDYXRlZ29yeRjWDww</xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
+			</xsl:for-each>
 			<!-- Polizia di stato -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GLfNZgwLEghDYXRlZ29yeRjAGAw']">
 				<xsl:copy>
 				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GLfNZgwLEghDYXRlZ29yeRjWDww</xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
+			</xsl:for-each>
 			<!-- Vigili del fuoco -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GLfNZgwLEghDYXRlZ29yeRi5lAEM']">
 				<xsl:copy>
@@ -261,6 +270,9 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
+			</xsl:element>
+			</xsl:copy>
+		</xsl:for-each>
 		<!-- Dove Mangiare -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIQsSC1VzZXJBY2NvdW50GLfNZgwLEghDYXRlZ29yeRgJDA']">
 			<xsl:copy>

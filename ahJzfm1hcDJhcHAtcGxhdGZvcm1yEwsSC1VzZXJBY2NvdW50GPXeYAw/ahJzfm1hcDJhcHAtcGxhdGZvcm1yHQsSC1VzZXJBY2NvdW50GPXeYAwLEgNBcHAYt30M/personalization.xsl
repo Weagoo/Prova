@@ -115,6 +115,9 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
+			</xsl:element>
+			</xsl:copy>
+			</xsl:for-each>
 		<!-- Storie e Curiosità -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIQsSC1VzZXJBY2NvdW50GPXeYAwLEghDYXRlZ29yeRh4DA']">
 				<xsl:copy>
@@ -130,12 +133,12 @@
 				</xsl:copy>
 			</xsl:for-each>
 		<!-- Fuori porta -->
-			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIQsSC1VzZXJBY2NvdW50GPXeYAwLEghDYXRlZ29yeRhnDA']">
+		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIQsSC1VzZXJBY2NvdW50GPXeYAwLEghDYXRlZ29yeRhnDA']">
 				<xsl:copy>
 				<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
-			</xsl:for-each>
+		</xsl:for-each>
 		<!-- Cosa fare -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GPXeYAwLEghDYXRlZ29yeRjCKAw']">
 			<xsl:copy>
@@ -192,7 +195,10 @@
 					<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GPXeYAwLEghDYXRlZ29yeRjCKAw</xsl:attribute>
 					<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 					</xsl:copy>
-				</xsl:for-each>		
+				</xsl:for-each>
+				</xsl:element>
+				</xsl:copy>
+		</xsl:for-each>
 		<!-- Come Muoversi -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GPXeYAwLEghDYXRlZ29yeRifGAw']">
 			<xsl:copy>
@@ -250,6 +256,9 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
+			</xsl:element>
+			</xsl:copy>
+		</xsl:for-each>
 		<!-- Dove Mangiare -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GPXeYAwLEghDYXRlZ29yeRjEKAw']">
 			<xsl:copy>

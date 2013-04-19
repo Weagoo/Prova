@@ -4,10 +4,15 @@
 	<xsl:output method="xml" version="1.0" encoding="utf-8" indent="yes" />
 	<!-- Praga WeaGoo -->
 	<!-- Starting template to generate all the other structures -->
-<xsl:template match="@*|node()">
+	<xsl:template match="@*|node()">
 		<xsl:copy>
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:copy>
+	</xsl:template>
+	
+	<!-- Configure shortName for submission on Android -->
+	<xsl:template match="//application[1]/@shortName">
+		<xsl:attribute name="shortName">Pragaunaguidautile</xsl:attribute>
 	</xsl:template>
 
 	<xsl:template match="categories/category[@key='root']/categories">

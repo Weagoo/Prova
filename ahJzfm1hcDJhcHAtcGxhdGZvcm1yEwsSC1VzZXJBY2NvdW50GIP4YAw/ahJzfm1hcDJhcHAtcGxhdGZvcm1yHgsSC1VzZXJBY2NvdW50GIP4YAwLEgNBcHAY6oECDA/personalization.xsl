@@ -199,7 +199,7 @@
 				</xsl:copy>
 			</xsl:for-each>
 			<!-- Natale e festivit� -->
-				<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GIP4YAwLEghDYXRlZ29yeRjG6gEM-dQw']">
+				<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GIP4YAwLEghDYXRlZ29yeRjG6gEM']">
 					<xsl:copy>
 					<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GIP4YAwLEghDYXRlZ29yeRjUTgw</xsl:attribute>
 					<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />

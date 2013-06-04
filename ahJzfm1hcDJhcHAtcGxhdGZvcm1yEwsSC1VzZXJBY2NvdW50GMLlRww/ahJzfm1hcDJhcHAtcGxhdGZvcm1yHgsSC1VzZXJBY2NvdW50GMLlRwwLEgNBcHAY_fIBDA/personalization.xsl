@@ -197,12 +197,12 @@
 		</xsl:for-each>
 
 		<!-- News -->
-		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GMLlRwwLEghDYXRlZ29yeRihgQoM']">
-			<xsl:copy>
-			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
-			<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
-			</xsl:copy>
-		</xsl:for-each>
+<!-- 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GMLlRwwLEghDYXRlZ29yeRihgQoM']"> -->
+<!-- 			<xsl:copy> -->
+<!-- 			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute> -->
+<!-- 			<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " /> -->
+<!-- 			</xsl:copy> -->
+<!-- 		</xsl:for-each> -->
 		
 		<!-- Servizi geo-localizzati -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GMLlRwwLEghDYXRlZ29yeRjyqAIM']">

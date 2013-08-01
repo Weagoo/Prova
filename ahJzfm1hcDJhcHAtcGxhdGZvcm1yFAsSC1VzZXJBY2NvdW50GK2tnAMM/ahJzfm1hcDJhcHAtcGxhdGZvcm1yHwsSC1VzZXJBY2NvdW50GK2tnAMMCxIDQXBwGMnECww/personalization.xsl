@@ -2,7 +2,7 @@
 <xsl:stylesheet version="2.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="xml" version="1.0" encoding="utf-8" indent="yes" />
-  <!-- Torino Meeting 2013 -->
+  <!-- Torino Meeting 2013 - weagoo.torino@gmail.com -->
   <!-- Starting template to generate all the other structures -->
 	<xsl:template match="@*|node()">
 		<xsl:copy>
@@ -16,28 +16,28 @@
 	<xsl:template match="categories/category[@key='root']/categories">
 		<xsl:copy>
 		<xsl:apply-templates select="attribute::*" />
-		<!-- Programma di Mercoledì -->
+		<!-- Programma di Mercoledi -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yJAsSC1VzZXJBY2NvdW50GK2tnAMMCxIIQ2F0ZWdvcnkYovsLDA']">
 			<xsl:copy>
 			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
 			<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 			</xsl:copy>
 		</xsl:for-each>
-		<!-- Programma di Giovedì -->
+		<!-- Programma di Giovedi -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yJAsSC1VzZXJBY2NvdW50GK2tnAMMCxIIQ2F0ZWdvcnkYiYMMDA']">
 			<xsl:copy>
 			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
 			<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 			</xsl:copy>
 		</xsl:for-each>
-		<!-- Programma di Venerdì -->
+		<!-- Programma di Venerdi -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yJAsSC1VzZXJBY2NvdW50GK2tnAMMCxIIQ2F0ZWdvcnkYofsLDA']">
 			<xsl:copy>
 			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
 			<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 			</xsl:copy>
 		</xsl:for-each>
-		<!-- La Città -->
+		<!-- La Citta -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GK2tnAMMCxIIQ2F0ZWdvcnkY6QcM']">
 			<xsl:copy>
 			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
@@ -135,6 +135,7 @@
 				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GK2tnAMMCxIIQ2F0ZWdvcnkY-VUM</xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
+			</xsl:for-each>
 			<!-- luoghi storici -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GK2tnAMMCxIIQ2F0ZWdvcnkYpB8M']">
 				<xsl:copy>
@@ -142,7 +143,10 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
-			<!-- Storie e Curiosità -->
+			</xsl:element>
+			</xsl:copy>
+			</xsl:for-each>
+			<!-- Storie e Curiosita -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GK2tnAMMCxIIQ2F0ZWdvcnkYgX0M']">
 				<xsl:copy>
 				<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
@@ -171,7 +175,7 @@
 			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
 			<xsl:apply-templates select="attribute::* [not(name()='listtype')][not(name()='stringlisttype')][not(name()='parentKey')] | child::* [not(name()='objects')]" />
 			<xsl:element name="categories">
-			<!-- Eventi e Festività -->
+			<!-- Eventi e Festivita -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yJAsSC1VzZXJBY2NvdW50GK2tnAMMCxIIQ2F0ZWdvcnkYkcsBDA']">
 				<xsl:copy>
 				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yJAsSC1VzZXJBY2NvdW50GK2tnAMMCxIIQ2F0ZWdvcnkYuZQBDA</xsl:attribute>
@@ -199,6 +203,9 @@
 					<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 					</xsl:copy>
 				</xsl:for-each>
+			</xsl:element>
+			</xsl:copy>
+		</xsl:for-each>
 		<!-- Come Muoversi -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GK2tnAMMCxIIQ2F0ZWdvcnkYgn0M']">
 			<xsl:copy>
@@ -242,6 +249,9 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
+			</xsl:element>
+			</xsl:copy>
+		</xsl:for-each>
 		<!-- Dove Mangiare -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yJAsSC1VzZXJBY2NvdW50GK2tnAMMCxIIQ2F0ZWdvcnkYoZwBDA']">
 			<xsl:copy>
